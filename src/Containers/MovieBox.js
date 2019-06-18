@@ -1,5 +1,6 @@
 import React,{Component} from 'react';
-import MovieList from '../Components/MovieList'
+import MovieList from '../Components/MovieList';
+import MovieForm from '../Components/MovieForm';
 
 
 class MovieBox extends Component{
@@ -50,9 +51,9 @@ class MovieBox extends Component{
       <div>
       <h1>Upcoming Releases</h1>
       <MovieList data={this.state.data}/>
-      <MovieBox handleMovieSubmit = {this.handleMovieSubmit}/>
+      <MovieForm handleMovieSubmit = {this.handleMovieSubmit}/>
       </div>
-    )
+    );
   }
 
 

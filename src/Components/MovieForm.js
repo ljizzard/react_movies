@@ -8,7 +8,7 @@ class MovieForm extends Component{
     this.state = {
       id: '',
       name: '',
-      url: ","
+      url: ""
     }
 
     this.handleAddMovieName = this.handleAddMovieName.bind(this);
@@ -29,7 +29,7 @@ class MovieForm extends Component{
     if(!this.state.name.trim() || !this.state.url.trim()){
       return;
     }
-    this.props.onMovieSubmit(this.state);
+    this.props.handleMovieSubmit(this.state);
     this.setState({ name: "", url:""});
   }
 
@@ -40,6 +40,7 @@ class MovieForm extends Component{
       onChange = {this.handleAddMovieName}/>
       <input type = "text" placeholder = "film url" value = {this.state.url}
       onChange = {this.handleAddMovieUrl}/>
+      <input type = "submit" value="Add Film" />
       </form>
     );
   }
